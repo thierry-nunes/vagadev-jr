@@ -1,0 +1,273 @@
+.carousel {
+
+  &__controller {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+
+    color: #ffffff;
+    background-color: var(--blue);
+    top: 20vh;
+    height: 280px;
+    width: 60px;
+    right: 0;
+    overflow: hidden;
+  }
+
+  &__title p {
+    width: 13vh;
+    transform: rotate(90deg);
+    font-size: 14px;  
+  }
+
+  &__title span {
+    margin-top: 40px;
+    content: "";
+    display: inline-block;
+    border: 1px solid #ffffff;
+    width: 5rem;
+    transform: rotate(90deg);
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    top: 49vh;
+    width: 60px;
+    height: 80px;
+    right: 0;
+    border-radius: 0 0 0 10px;
+    background-color: var(--darkBlue);
+    color: #ffff;
+  }
+
+  &__number {
+    font-size: 14px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+
+  .arrow__left,
+  .arrow__right {
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all ease 0.2s;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+
+  &__info {
+    position: absolute;
+    width: 42vh;
+    right: 45vh;
+    top: 20vh;
+    z-index: 1;
+    text-align: end;
+    color: #ffffff;
+    font-weight: 900;
+  }
+
+  .info__title {
+    font-size: 40px;
+  }
+
+  .info__value {
+    font-size: 50px;
+    color: var(--blue);
+  }
+
+  .info__value span {
+    font-size: 20px;
+    bottom: 20px;
+    position: relative;
+  }
+
+  .info__description p {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 2rem;
+  }
+
+  &__slider {
+    overflow-x: hidden;
+  }
+
+  /*CAROUSEL*/
+  &__banner img {
+    width: 100vw;
+  }
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1700px) {
+  .carousel__info {
+    right: 30vh !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .carousel__info {
+    right: 29vh !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .info__description p {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .carousel__controller {
+    flex-direction: row;
+  }
+
+  .carousel__title {
+    flex-direction: row;
+    justify-content: unset !important;
+    height: 52px;
+    width: 98vw;
+    border-radius: 0 0 0 10px;
+    top: 36vh;    
+  }
+
+  .carousel__title p {
+    transform: none;
+    width: 114px;
+    margin-left: 3vh;
+  }
+
+  .carousel__title span {
+    transform: none;
+    margin-top: 0;
+    margin-left: 1vh;
+    width: 40vw;
+  }
+
+  .carousel__info {
+    right: 13vh !important;
+  }
+
+  .carousel__btn {
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: none;
+    top: 36vh;
+    width: 145px;
+    height: 52px;
+    border-radius: 0;    
+  }
+
+  .carousel__number {
+    margin: 0;
+  }
+
+  .carousel__banner img {
+    height: 393px !important;
+    width: unset !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .carousel__controller {
+    flex-direction: row;
+  }
+
+  .carousel__title {
+    flex-direction: row;
+    justify-content: unset !important;
+    height: 52px;
+    width: 100vw;
+    border-radius: 0 0 0 10px;
+    top: 62vh;    
+  }
+
+  .carousel__title p {
+    transform: none;
+    width: 114px;
+    margin-left: 3vh;
+  }
+
+  .carousel__title span {
+    transform: none;
+    margin-top: 0;
+    margin-left: 1vh;
+    width: 20vw !important;
+  }
+
+  .carousel__info {
+    right: 0vh !important;
+  }
+
+  .info__description p {
+    display: block;
+  }
+  
+  .carousel__banner img {
+    height: 430px !important;    
+  }
+
+  .carousel__btn {
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: none;
+    top: 62vh;
+    width: 145px;
+    height: 52px;
+    border-radius: 0;    
+  }
+
+  .carousel__number {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .carousel__info {
+    width: 100vw;
+    padding: 10px 15px;
+    right: 0;
+    top: 34.5vh;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+
+  .info__title {
+    font-size: 27px !important;
+  }
+
+  .info__value {
+    font-size: 57px !important;
+  }
+
+  .info__value span {       
+    bottom: 25px !important;
+  }
+
+  .info__description {
+    margin-left: 25px;
+  }
+
+  .info__description p {    
+    margin-top: 0 !important;
+    font-size: 12px !important;
+  }
+}

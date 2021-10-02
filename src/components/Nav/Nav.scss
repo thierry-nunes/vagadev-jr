@@ -1,0 +1,248 @@
+.nav {
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 70vw;
+    padding: 30px;
+    position: absolute;
+    z-index: 1 !important;
+  }
+
+  .left__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown__list {
+    position: relative;
+    top: 5px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu__icon {
+    color: #ffffff;
+    font-size: 60px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+
+  .dropdown__hidden {
+    display: none;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--darkBlue);
+    width: 550px;
+    height: 250px;
+    padding: 30px;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    z-index: 2;
+  }
+
+  .dropdown__list .dropdown__hamburguer:hover .dropdown__hidden {
+    display: flex;
+  }
+
+  .hidden__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 170px;
+  }
+
+  .hidden__title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .hidden__item {
+    padding: 10px 0;
+    
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      color: #ffffff;
+      transition: all ease 0.2s;      
+
+      &:hover {
+        background-color: var(--blue);
+        padding: 10px 50px 10px 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &__logo img {
+    width: 150px;
+    margin-left: 30px;
+    opacity: 1;
+    transition: all ease 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .right__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+  }
+
+  .content__link {    
+    a {
+      svg {
+        font-size: 25px;
+      }
+
+      span {
+        padding-left: 20px;        
+      }
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-right: 1px solid #ffffff;
+      padding: 0 20px;
+      font-size: 16px;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #ffffff;
+      transition: all ease 0.2s;
+
+      &:hover {
+        color: var(--blue);
+      }
+    }
+  }
+
+  .content__link--bag {
+    a {
+      border-right: 0;
+      padding-right: 0;
+    
+      span {
+        background-color: var(--blue);    
+        padding: 3px 8px;
+        border-radius: 50%;
+        color: #ffffff;
+      }      
+    }
+  }  
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1500px) {
+  .dropdown__list .dropdown__hamburguer:hover .dropdown__hidden {
+    display: none !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .right__content {
+    width: 150px !important;
+  }
+  
+  .content__link a {
+    border-right: none !important;
+    padding: 0 !important;    
+  }
+
+  .content__link--bag a {
+    padding-right: 0 !important;
+  }
+
+  .hidden__info {    
+    display: none;
+  }
+
+  .hidden__info--active {
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav__container {
+    width: 90vw !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .nav {
+    display: flex;
+    justify-content: unset;
+  }
+
+  .nav__container {
+    padding: 10px;
+    width: 100% !important;
+    z-index: 3 !important;
+  }
+
+  .menu__icon {
+    font-size: 45px !important;
+    margin-top: 1vh;
+  }
+
+  .menu__icon--on {
+    display: none;
+  }  
+
+  .hidden__border {
+    content: "";
+    border-top: 1px solid #000;
+    width: 90vw;
+    position: absolute;
+    left: 15px;
+    margin-top: 1vh;
+  }
+
+  .nav__logo img {
+    width: 130px;
+    margin-left: 10px;
+  }
+
+  .right__content {
+    margin-left: 20px;  
+    width: 150px !important;  
+  }
+
+  .content__link a {
+    border-right: none !important;
+    padding: 0 !important;    
+  }
+
+  .content__link--bag a {
+    padding-right: 0 !important;
+  }
+
+  .hidden__info {    
+    display: none;
+  }
+
+  .hidden__info--active {
+    display: block;
+  }
+}
